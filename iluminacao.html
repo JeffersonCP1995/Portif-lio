@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construmax - Iluminação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CONSTRUMAX</div>
+        <div class="header-content">
+            <input type="text" placeholder="O que você procura?">
+            <nav>
+                <div class="nav-links">
+                    <a href="#">Ofertas</a>
+                    <a href="#" id="departments-btn">Departamentos</a>
+                    <div class="departments-menu" id="departments-menu">
+                        <ul>
+                            <li><a href="ar_e_ventilacao.html"><i class="fas fa-wind"></i> Ar e Ventilação</a></li>
+                            <li><a href="audio_video_tvs.html"><i class="fas fa-volume-up"></i> Áudio, Vídeo e TVs</a></li>
+                            <li><a href="banheiro.html"><i class="fas fa-toilet"></i> Banheiro</a></li>
+                            <li><a href="cama_mesa_banho.html"><i class="fas fa-bed"></i> Cama, Mesa e Banho</a></li>
+                            <li><a href="cozinhas.html"><i class="fas fa-kitchen-set"></i> Cozinhas e Áreas de Serviço</a></li>
+                            <li><a href="decoracao.html"><i class="fas fa-couch"></i> Decoração</a></li>
+                            <li><a href="eletrodomesticos.html"><i class="fas fa-blender"></i> Eletrodomésticos</a></li>
+                            <li><a href="eletroportateis.html"><i class="fas fa-blender-phone"></i> Eletroportáteis</a></li>
+                            <li><a href="ferragens.html"><i class="fas fa-wrench"></i> Ferragens</a></li>
+                            <li><a href="ferramentas.html"><i class="fas fa-toolbox"></i> Ferramentas</a></li>
+                            <li><a href="informatica.html"><i class="fas fa-computer"></i> Informática</a></li>
+                            <li><a href="iluminacao.html"><i class="fas fa-lightbulb"></i> Iluminação</a></li>
+                            <li><a href="jardim_varanda.html"><i class="fas fa-seedling"></i> Jardim e Varanda</a></li>
+                            <li><a href="limpeza_casa.html"><i class="fas fa-broom-ball"></i> Limpeza da Casa</a></li>
+                            <li><a href="madeiras.html"><i class="fas fa-hammer"></i> Madeiras</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" id="cart-btn">Carrinho 🛒 (<span id="cart-count">0</span>)</a>
+                </div>
+                <a href="#" id="login-link">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="produtos">
+        <h2>Iluminação</h2>
+        <div class="grid">
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Lâmpada de LED 9W">
+                <h3>Lâmpada de LED 9W</h3>
+                <p>Ideal para qualquer ambiente residencial.</p>
+                <span class="preco">R$ 12,50</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Luminária de Teto">
+                <h3>Luminária de Teto</h3>
+                <p>Modernidade e elegância para sua sala de estar.</p>
+                <span class="preco">R$ 145,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Luminária de Teto LED">
+                <h3>Luminária de Teto LED</h3>
+                <p>Ideal para iluminar grandes espaços com eficiência e economia de energia.</p>
+                <span class="preco">R$ 120,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Refletor Holofote LED">
+                <h3>Refletor Holofote LED</h3>
+                <p>Perfeito para áreas externas, oferecendo alta luminosidade e durabilidade.</p>
+                <span class="preco">R$ 95,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Lâmpada Inteligente RGB">
+                <h3>Lâmpada Inteligente RGB</h3>
+                <p>Controle a cor e a intensidade da luz pelo smartphone, criando ambientes personalizados.</p>
+                <span class="preco">R$ 60,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <aside id="cart-panel" class="cart-panel">
+        <h2>Meu Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <div class="cart-summary">
+            <p>Total: R$ <span id="cart-total">0.00</span></p>
+            <button id="checkout">Finalizar Compra</button>
+            <button id="close-cart"><i class="fas fa-times"></i>Fechar</button>
+        </div>
+    </aside>
+
+    <section class="info-contato">
+        <div class="coluna">
+            <h4>Compre pelo WhatsApp</h4>
+            <p>Para todo o território nacional. Horário de atendimento pelo Whatsapp sujeito à região.</p>
+            <h3>(34) 9 8413-7383</h3>
+        </div>
+        <div class="coluna">
+            <h4>Compre pelo telefone</h4>
+            <p>Atendimento do Televendas é das 8h às 19h de segunda a sexta. Atendimento do Televendas é das 8h às 14h aos sábados.</p>
+            <h3>9 8413-7383</h3>
+            <p>Capitais</p>
+            <h3>(34) 9 8413-7383</h3>
+            <p>Demais Regiões</p>
+        </div>
+        <div class="coluna">
+            <h4>Central de atendimento</h4>
+            <p>A Central de Atendimento funciona das 08h às 19h de segunda a sábado, exceto feriados.</p>
+            <h3>(34) 9 8413-7383</h3>
+            <p>Capitais (Telefone e WhatsApp)</p>
+            <h3>(34) 9 8413-7383</h3>
+            <p>Demais Regiões</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Construmax - Todos os direitos reservados</p>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Entrar</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+                <a href="#" class="forgot-password" id="forgot-password-link">Esqueci minha senha</a>
+            </form>
+            <p>Não tem uma conta? <a href="#" id="register-link">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Criar uma conta</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="reg-name">Nome Completo:</label>
+                <input type="text" id="reg-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-cpf">CPF:</label>
+                <input type="text" id="reg-cpf" name="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-dob">Data de Nascimento:</label>
+                <input type="date" id="reg-dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-email">E-mail:</label>
+                <input type="email" id="reg-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-phone">Telefone:</label>
+                <input type="tel" id="reg-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-zip">CEP:</label>
+                <input type="text" id="reg-zip" name="zip" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-street">Nome da Rua:</label>
+                <input type="text" id="reg-street" name="street" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-number">Número da Casa:</label>
+                <input type="text" id="reg-number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-complement">Complemento:</label>
+                <input type="text" id="reg-complement" name="complement">
+            </div>
+            <div class="form-group">
+                <label for="reg-state">Estado:</label>
+                <select id="reg-state" name="state" required>
+                    <option value="">Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reg-city">Cidade:</label>
+                <input type="text" id="reg-city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">Criar Senha:</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="#" id="login-from-register">Entrar</a></p>
+    </div>
+</div>
+
+<div id="forgot-password-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Recuperar Senha</h2>
+        <p>Informe seu e-mail ou CPF para receber as instruções de recuperação.</p>
+        <form id="forgot-password-form">
+            <div class="form-group">
+                <label for="forgot-email-cpf">E-mail ou CPF:</label>
+                <input type="text" id="forgot-email-cpf" name="email-cpf" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Lembrou da senha? <a href="#" id="login-from-forgot">Voltar para o Login</a></p>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

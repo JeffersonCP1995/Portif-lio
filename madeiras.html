@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construmax - Madeiras </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CONSTRUMAX</div>
+        <div class="header-content">
+            <input type="text" placeholder="O que você procura?">
+            <nav>
+                <div class="nav-links">
+                    <a href="#">Ofertas</a>
+                    <a href="#" id="departments-btn">Departamentos</a>
+                    <div class="departments-menu" id="departments-menu">
+                        <ul>
+                            <li><a href="ar_e_ventilacao.html"><i class="fas fa-wind"></i> Ar e Ventilação</a></li>
+                            <li><a href="audio_video_tvs.html"><i class="fas fa-volume-up"></i> Áudio, Vídeo e TVs</a></li>
+                            <li><a href="banheiro.html"><i class="fas fa-toilet"></i> Banheiro</a></li>
+                            <li><a href="cama_mesa_banho.html"><i class="fas fa-bed"></i> Cama, Mesa e Banho</a></li>
+                            <li><a href="cozinhas.html"><i class="fas fa-kitchen-set"></i> Cozinhas e Áreas de Serviço</a></li>
+                            <li><a href="decoracao.html"><i class="fas fa-couch"></i> Decoração</a></li>
+                            <li><a href="eletrodomesticos.html"><i class="fas fa-blender"></i> Eletrodomésticos</a></li>
+                            <li><a href="eletroportateis.html"><i class="fas fa-blender-phone"></i> Eletroportáteis</a></li>
+                            <li><a href="ferragens.html"><i class="fas fa-wrench"></i> Ferragens</a></li>
+                            <li><a href="ferramentas.html"><i class="fas fa-toolbox"></i> Ferramentas</a></li>
+                            <li><a href="informatica.html"><i class="fas fa-computer"></i> Informática</a></li>
+                            <li><a href="iluminacao.html"><i class="fas fa-lightbulb"></i> Iluminação</a></li>
+                            <li><a href="jardim_varanda.html"><i class="fas fa-seedling"></i> Jardim e Varanda</a></li>
+                            <li><a href="limpeza_casa.html"><i class="fas fa-broom-ball"></i> Limpeza da Casa</a></li>
+                            <li><a href="madeiras.html"><i class="fas fa-hammer"></i> Madeiras</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" id="cart-btn">Carrinho 🛒 (<span id="cart-count">0</span>)</a>
+                </div>
+                <a href="#" id="login-link">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="produtos">
+        <h2>Iluminação</h2>
+        <div class="grid">
+            <div class="produto" data-nome="Lâmpada de LED 9W" data-preco="12.50">
+                <img src="img/lampada_led.jpg" alt="Lâmpada de LED 9W">
+                <h3>Lâmpada de LED 9W</h3>
+                <p class="preco">R$ 12,50</p>
+                <button class="add-cart">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto" data-nome="Luminária de Teto" data-preco="145.00">
+                <img src="img/luminaria.jpg" alt="Luminária de Teto">
+                <h3>Luminária de Teto</h3>
+                <p class="preco">R$ 145,00</p>
+                <button class="add-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

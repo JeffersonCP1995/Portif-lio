@@ -1,0 +1,641 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: #004d26;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+header input {
+    padding: 8px;
+    width: 40%;
+    border: none;
+    border-radius: 4px;
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Departments Menu Style */
+.departments-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show menu on hover */
+#departments-btn:hover + .departments-menu, .departments-menu:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.departments-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.departments-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    white-space: normal;
+}
+
+.departments-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+.departments-menu li a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #666;
+    width: 24px;
+    text-align: center;
+}
+
+/* Main Banner - Carousel Adjustments */
+.banner {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 0;
+    border-radius: 8px;
+    margin: 25px auto;
+    max-width: 1200px;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-slides img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.banner-slides img.active {
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    z-index: 3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.banner button {
+    padding: 12px 25px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+    background: #e6b800;
+}
+
+.banner-prev, .banner-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.banner-prev:hover, .banner-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* Products Section */
+.produtos {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.produto {
+    width: 220px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+    max-width: 100%;
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.produto .preco {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #004d26;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto 0 auto;
+    width: fit-content;
+}
+
+.add-to-cart:hover {
+    background-color: rgb(67, 160, 71);
+}
+
+/* Cart Panel */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.cart-item-name {
+    font-weight: bold;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.quantity-btn {
+    background: none;
+    border: none;
+    font-size: 1em;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.quantity-value {
+    padding: 0 5px;
+    font-weight: normal;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #c90000;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: #004d26;
+}
+
+/* Cart Actions */
+#checkout {
+    background-color: #004d26;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#checkout:hover {
+    background-color: #00331a;
+}
+
+#close-cart {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+
+#close-cart i {
+    margin-right: 5px;
+}
+
+/* Contact Section */
+.info-contato {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.info-contato .coluna {
+    flex: 1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-contato h4 {
+    color: #004d26;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.info-contato h3 {
+    color: #004d26;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.info-contato p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Footer Style */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Modal Login, Register, and Forgot Password */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    animation: slideIn 0.4s ease-out;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #004d26;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.modal-content button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #004d26;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #00331a;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-content p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.modal-content a {
+    color: #004d26;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Specific Register Modal Styles */
+#register-modal .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#register-modal .form-group {
+    margin-bottom: 15px;
+}
+
+#register-modal .form-group label,
+#register-modal .form-group input,
+#register-modal .form-group select {
+    font-size: 0.9em;
+}
+
+#register-modal button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.banner-prev, .banner-next {
+    display: none;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.produto {
+    width: 220px;
+}
+
+.produto img {
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.modal {
+    display: none; /* Isso esconde o modal por padrão */
+    /* outras propriedades de estilo e posicionamento */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex; /* Isso faz o modal aparecer quando a classe é adicionada */
+}
